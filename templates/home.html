@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Zakat Calculator</h1>
+      <form action="/calculate" method="POST">
+        <label for="wealth">Total Wealth (EGP):</label>
+        <input type="number" step="0.01" id="wealth" name="wealth" required />
+
+        <label for="debts">Total Debts (EGP):</label>
+        <input type="number" step="0.01" id="debts" name="debts" required />
+
+        <label for="gold_price_per_gram">Gold Price per Gram (EGP):</label>
+        <input
+          type="number"
+          step="0.01"
+          id="gold_price_per_gram"
+          name="gold_price_per_gram"
+          required />
+
+        <button type="submit">Calculate Zakat</button>
+      </form>
+    </div>
+  </body>
+</html>

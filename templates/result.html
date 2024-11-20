@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zakat Result</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Zakat Calculation Result</h1>
+      {% if eligible %}
+      <p>Your net wealth exceeds the Nisab threshold of {{ nisab }}EGP.</p>
+      <p><strong>Your Zakat payable is: {{ zakat }}EGP</strong></p>
+      {% else %}
+      <p>Your net wealth is below the Nisab threshold of {{ nisab }}EGP.</p>
+      <p><strong>You are not eligible to pay Zakat.</strong></p>
+      {% endif %}
+      <a href="/">Back to Home</a>
+    </div>
+  </body>
+</html>
